@@ -1,7 +1,7 @@
 import { useState } from "react";
-const fs = require('fs');
-const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
-const { IamAuthenticator } = require('ibm-watson/auth');
+// const fs = require('fs');
+// const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
+// const { IamAuthenticator } = require('ibm-watson/auth');
 
 function App() {
   const [text, setText] = useState("")
@@ -9,7 +9,7 @@ function App() {
   const [excludeSpace, setExcludeSpace] = useState(0)
   const [characters, setCharacters] = useState(0)
   const [sentence, setSentence] = useState(0)
-  const [paragraph, setParagraph] = useState(0)
+  // const [paragraph, setParagraph] = useState(0)
   const handleChange = (e) => {
     const words = e.target.value
     setText(words)
@@ -45,7 +45,7 @@ function App() {
       <header className="App-header">
         <h1>Word Count</h1>
         <h2>Words: {wordCount}</h2>
-        <h2>Paragraph Count: {paragraph}</h2>
+        {/* <h2>Paragraph Count: {paragraph}</h2> */}
         <h2>Characters:{characters}</h2>
         <h2>Characters excluding spaces: {excludeSpace}</h2>
         <h2>Sentence: {sentence}</h2>
